@@ -9,7 +9,7 @@ public class Garazs implements Iterable, Serializable {
     private ArrayList<Jarmu> jarmuk;
 
     public Garazs() {
-        this.jarmuk = new ArrayList<>(5);
+        this.jarmuk = new ArrayList<>();
     }
 
     public ArrayList<Jarmu> getJarmuk() {
@@ -20,15 +20,21 @@ public class Garazs implements Iterable, Serializable {
         this.jarmuk = jarmuk;
     }
 
-    public void beallas(Jarmu jarmu) {
-        jarmuk.add(jarmu);
+    public String beallas(Jarmu jarmu) {
+        if (jarmuk.size() < 5) {
+            jarmuk.add(jarmu);
+            return "A jármű beállt a garázsba.";
+        }
+        return "A garázs megtelt!";
     }
 
     public void kiallas(Jarmu jarmu) {
         jarmuk.remove(jarmu);
+        System.out.println("A jármű kiállt a garázsból.");
     }
 
     public void megjelen() {
+        System.out.println("Garázsban álló járművek: ");
         for(Jarmu jarmu : jarmuk) {
             System.out.println(jarmu);
         }
