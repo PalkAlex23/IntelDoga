@@ -21,7 +21,18 @@ class GarazsTest {
         garazs.beallas(j4);
         garazs.beallas(j5);
 
-        Jarmu j6 = new Jarmu("fehér", new Tulajdonos("Palkovics János"));
-        assertEquals("A garázs megtelt!", garazs.beallas(j6));
+        Jarmu j6 = new Jarmu("fehér", new Tulajdonos("Dulka István"));
+        assertEquals(5, garazs.getJarmuk().size());
+    }
+
+    @Test
+    void nemEgyforma() {
+
+    }
+
+
+    @Test
+    void getterNemSetter() {
+
     }
 }

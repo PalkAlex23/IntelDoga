@@ -20,12 +20,10 @@ public class Garazs implements Iterable, Serializable {
         this.jarmuk = jarmuk;
     }
 
-    public String beallas(Jarmu jarmu) {
+    public void beallas(Jarmu jarmu) {
         if (jarmuk.size() < 5) {
             jarmuk.add(jarmu);
-            return "A jármű beállt a garázsba.";
         }
-        return "A garázs megtelt!";
     }
 
     public void kiallas(Jarmu jarmu) {

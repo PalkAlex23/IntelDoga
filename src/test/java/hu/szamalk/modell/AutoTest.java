@@ -8,7 +8,8 @@ class AutoTest {
 
     @Test
     void rendszamKivetel() throws NemLetezoAutoExpection {
+        /* egy teszt fájl */
         Auto auto = new Auto("ACB01", 5, 3000000);
-        /* assertThrows(new NemLetezoAutoExpection(), auto); */
+        /* assertThrows(auto, new NemLetezoAutoExpection());*/
     }
 }
